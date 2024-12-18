@@ -8,4 +8,5 @@ public class GameManager : MonoBehaviour
     public void SceneToGamePlay() => SceneManager.LoadScene("GamePlay");
     public void SceneToMainMenu() => SceneManager.LoadScene("MainMenu");
     public void QuitGame() => Application.Quit();
+
 }

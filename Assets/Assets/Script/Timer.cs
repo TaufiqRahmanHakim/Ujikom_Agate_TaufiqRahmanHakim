@@ -30,8 +30,7 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
-        timer -= 1f * Time.deltaTime;
-        tmpTimer.text = timer.ToString();
+        
 
         if (timer <= 0 && !flagGameOver)
         {
@@ -42,6 +41,11 @@ public class Timer : MonoBehaviour
             //Time.timeScale= 0f;
             tmpScoreGameOver.text = "Score : " + Score.Instance.scoreValue;
             flagGameOver = true;
+        }
+        else if(timer > 0.0001 && !flagGameOver)
+        {
+            timer -= 1f * Time.deltaTime;
+            tmpTimer.text = timer.ToString();
         }
     }
 }

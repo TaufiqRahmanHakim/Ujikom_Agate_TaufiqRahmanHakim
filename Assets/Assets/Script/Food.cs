@@ -10,14 +10,19 @@ public class Food : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 3f);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         Score.Instance.addScore();
+        SFXManager.instance.playDestroyed();
+        VFXManager.instance.SpawnVFX(collision.transform);
+
         Destroy(collision.gameObject);
         Destroy(gameObject);
+
+
     }
     private void FixedUpdate()
     {
