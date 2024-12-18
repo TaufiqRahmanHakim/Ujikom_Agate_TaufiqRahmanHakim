@@ -8,6 +8,8 @@ public class ThrowObject : MonoBehaviour
     [SerializeField] private Transform targetObject;
     [SerializeField] private Animator animator;
 
+    [SerializeField] private float delayThrow;
+
     private void Throw()
     {
         Instantiate(throwObject, gameObject.transform.position, Quaternion.identity);
@@ -15,10 +17,16 @@ public class ThrowObject : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (delayThrow > 0) {
+            delayThrow -= 1f * Time.deltaTime;
+            
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && delayThrow <= 0) {
             animator.SetBool("Throw",true);
             Debug.Log("fdddf");
             Throw();
+            delayThrow = 3f;
         
         }
     }
