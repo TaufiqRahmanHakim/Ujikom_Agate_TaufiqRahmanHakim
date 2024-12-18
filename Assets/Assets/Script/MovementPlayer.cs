@@ -19,7 +19,6 @@ public class MovementPlayer : MonoBehaviour
 
         animator.SetFloat("Horizontal", movementY);
 
-        Debug.Log(movementY);
 
         rb.velocity = new Vector3 (movementY * speedMovement, 0, 0);
     }
