@@ -15,6 +15,7 @@ public class Food : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Score.Instance.addScore();
         Destroy(collision.gameObject);
         Destroy(gameObject);
     }
