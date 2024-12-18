@@ -29,4 +29,9 @@ public class Score : MonoBehaviour
         scoreValue--;
         tmpScore.text = scoreValue.ToString();
     }
+    public void min3Score()
+    {
+        scoreValue -= 3;
+        tmpScore.text = scoreValue.ToString();
+    }
 }

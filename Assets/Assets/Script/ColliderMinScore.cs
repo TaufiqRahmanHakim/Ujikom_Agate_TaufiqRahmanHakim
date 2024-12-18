@@ -8,7 +8,7 @@ public class ColliderMinScore : MonoBehaviour
     {
         if(Score.Instance.scoreValue != 0)
         {
-            Score.Instance.minScore();
+            Score.Instance.min3Score();
 
         }
         Destroy(other.gameObject);

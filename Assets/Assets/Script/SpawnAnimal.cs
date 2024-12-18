@@ -14,7 +14,7 @@ public class SpawnAnimal : MonoBehaviour
         {
             timerReset += 1f * Time.deltaTime;
         }
-        else if(timerReset > 3f)
+        else if(timerReset > 2f)
         {
             timerReset = 0;
             SpawnObject();
