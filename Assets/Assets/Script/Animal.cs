@@ -30,6 +30,9 @@ public class Animal : MonoBehaviour
             case AnimalType.dog:
                 speedMovement = 10f;
                 break;
+            case AnimalType.horse:
+                speedMovement = 7f;
+                break;
 
         }
     }
@@ -45,5 +48,5 @@ public class Animal : MonoBehaviour
 
 public enum AnimalType
 {
-    cow, deer, dog
+    cow, deer, dog, horse
 }
